@@ -16,7 +16,7 @@ export default function EditProduct() {
   const [newImages, setNewImages] = useState([]); // Yeni eklenen resimler için
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/${id}`)
+    fetch(`https://backend-j44e.onrender.com/api/products/${id}`)
       .then(res => res.json())
       .then(data => {
         setFormData({
@@ -67,7 +67,7 @@ export default function EditProduct() {
         newImages.forEach(file => data.append("images", file));
       }
 
-      const res = await fetch(`http://localhost:5000/api/products/${id}`, {
+      const res = await fetch(`https://backend-j44e.onrender.com/api/products/${id}`, {
         method: "PUT",
         body: data,
         credentials: "include",
@@ -134,7 +134,7 @@ export default function EditProduct() {
             {formData.images.map((img, idx) => (
               <div key={idx} className="relative">
                 <img
-                  src={`http://localhost:5000${img}`}
+                  src={`https://backend-j44e.onrender.com${img}`}
                   className="w-32 h-32 object-contain border rounded-3xl shadow"
                 />
                 <button
