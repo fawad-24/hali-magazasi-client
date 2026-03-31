@@ -15,9 +15,9 @@ export default function ProductCard({ product }) {
 
   const imageUrl =
     product.images?.length > 0
-      ? `http://localhost:5000${product.images[0]}`
+      ? `https://backend-j44e.onrender.com${product.images[0]}`
       : product.image?.length > 0
-      ? `http://localhost:5000${product.image[0]}`
+      ? `https://backend-j44e.onrender.com${product.image[0]}`
       : "/no-image.png";
 
   const handleAddToCart = () => {
