@@ -6,7 +6,7 @@ export default function AdminOrders() {
 
   useEffect(() => {
     // Admin login ile siparişleri çek
-    fetch("http://localhost:5000/api/orders", {
+    fetch("https://backend-j44e.onrender.com/api/orders", {
       credentials: "include", // login şart
     })
       .then((res) => res.json())
@@ -63,7 +63,7 @@ export default function AdminOrders() {
 
                 try {
                   const res = await fetch(
-                    `http://localhost:5000/api/orders/${order._id}/delivery`,
+                    `https://backend-j44e.onrender.com/api/orders/${order._id}/delivery`,
                     {
                       method: "PUT",
                       headers: {
@@ -137,7 +137,7 @@ export default function AdminOrders() {
               onClick={async () => {
                 try {
                   const res = await fetch(
-                    `http://localhost:5000/api/orders/${order._id}/pay`,
+                    `https://backend-j44e.onrender.com/api/orders/${order._id}/pay`,
                     {
                       method: "POST",
                       credentials: "include",
