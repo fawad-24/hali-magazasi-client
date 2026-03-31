@@ -7,7 +7,7 @@ export default function ProductProvider({ children }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://backend-j44e.onrender.com/api/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
