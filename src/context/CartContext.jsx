@@ -16,7 +16,7 @@ export default function CartProvider({ children }) {
       }
 
       try {
-        const res = await fetch("http://localhost:5000/api/cart", {
+        const res = await fetch("https://backend-j44e.onrender.com/api/cart", {
           credentials: "include",
         });
         if (!res.ok) throw new Error("Sepet alınamadı");
@@ -39,7 +39,7 @@ export default function CartProvider({ children }) {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/cart/add", {
+      const res = await fetch("https://backend-j44e.onrender.com/api/cart/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -58,7 +58,7 @@ export default function CartProvider({ children }) {
 
   const removeFromCart = async (productId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/cart/remove/${productId}`, {
+      const res = await fetch(`https://backend-j44e.onrender.com/api/cart/remove/${productId}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -73,7 +73,7 @@ export default function CartProvider({ children }) {
 
   const clearCart = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/cart/clear", {
+      const res = await fetch("https://backend-j44e.onrender.com/api/cart/clear", {
         method: "DELETE",
         credentials: "include",
       });
