@@ -8,7 +8,7 @@ export default function ProductList() {
   
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://backend-j44e.onrender.com/api/products")
       .then(res => res.json())
       .then(data => {
         setProducts(data);
@@ -28,7 +28,7 @@ export default function ProductList() {
   if (!ok) return;
 
   try {
-    await fetch(`http://localhost:5000/api/products/${id}`, {
+    await fetch(`https://backend-j44e.onrender.com/api/products/${id}`, {
       method: "DELETE",
       credentials: "include",
       
@@ -73,7 +73,7 @@ export default function ProductList() {
         <img
           src={
             product.images && product.images.length > 0
-              ? `http://localhost:5000${product.images[0]}`
+              ? `https://backend-j44e.onrender.com${product.images[0]}`
               : "/no-image.png"
           }
           className="w-20 h-20 object-contain"
