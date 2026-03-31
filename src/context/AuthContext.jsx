@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState, useContext } from "react";
 import toast from "react-hot-toast";
 
-const API_URL = "http://localhost:5000/api/auth"; // 🔹 Backend auth URL
+const API_URL = "https://backend-j44e.onrender.com/api/auth"; // 🔹 Backend auth URL
 
 export const AuthContext = createContext();
 
