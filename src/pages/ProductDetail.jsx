@@ -34,7 +34,7 @@ function ProductDetail() {
         <img
           src={
             product.images && product.images.length > 0
-              ? `http://localhost:5000${product.images[currentImage]}`
+              ? `https://backend-j44e.onrender.com${product.images[currentImage]}`
               : "/no-image.png"
           }
           alt={product.name}
