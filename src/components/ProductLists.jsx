@@ -13,7 +13,7 @@ export default function ProductList() {
   if (!confirmDelete) return;
 
   try {
-    await fetch(`http://localhost:5000/api/products/${id}`, {
+    await fetch(`https://backend-j44e.onrender.com/api/products/${id}`, {
       method: "DELETE",
     });
 
